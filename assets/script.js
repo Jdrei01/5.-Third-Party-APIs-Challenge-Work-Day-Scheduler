@@ -1,7 +1,35 @@
+
+// allTimeBlocks color coded to indicate past, present, or future
+$(document).ready(function () {
+  var allTimeBlocks = $('.time-block');
+
+  console.log(allTimeBlocks);
+
+  allTimeBlocks.each(function () {
+    // 'this' referring to allTimeBlocks
+    console.log(this);
+
+    var id = parseInt(this.id.split('-')[1]);
+    var hour = dayjs().hour();
+
+    if (id < hour) {
+      // past
+      $(this).addClass('past');
+    } else if (id > hour) {
+      // future
+      $(this).addClass('future');
+    } else {
+      // present
+      $(this).addClass('present');
+    }
+
+  });
+
+});
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-$(function () {
+  // the code isn't run until the browser has finished rendering all the elements
+  // in the html.
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -20,4 +48,3 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
