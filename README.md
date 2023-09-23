@@ -11,6 +11,7 @@ This calendar application allows a user to plan and save events for each hour of
 * JavaScript
 * HTML
 * CSS
+* jQuery
 
 # Credits
 Created by Jandrei Timoteo with the help of Tutor Matthew Calimbas.
@@ -19,3 +20,4 @@ Created by Jandrei Timoteo with the help of Tutor Matthew Calimbas.
 https://jdrei01.github.io/5.-Third-Party-APIs-Challenge-Work-Day-Scheduler/
 
 # Screenshots
+![screenshot of deployed website](assets/Images/image1.png)
