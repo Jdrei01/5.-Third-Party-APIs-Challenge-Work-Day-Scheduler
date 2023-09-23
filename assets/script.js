@@ -3,9 +3,10 @@ var displayCurrentDay = $('#currentDay');
 
 function renderTime() {
   var now = dayjs();
-  displayCurrentDay.text(now.format("dddd, MMMM Do YYYY"));
-  console.log(formattedDate);
+  displayCurrentDay.text(now.format("dddd, MMMM D, YYYY"));
 }
+
+renderTime();
 
 // allTimeBlocks color coded to indicate past, present, or future
 $(document).ready(function () {
